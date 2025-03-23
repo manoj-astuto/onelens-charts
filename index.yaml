@@ -1,0 +1,23 @@
+apiVersion: v1
+entries:
+  job-cronjob-chart:
+  - apiVersion: v2
+    created: "2025-03-23T16:24:31.133748+05:30"
+    description: A Helm chart for deploying Kubernetes Jobs and CronJobs
+    digest: 7c5c246c01b763bdecef8bbc8606d24606146f51f65f7d3bde99d46993305e14
+    keywords:
+    - job
+    - cronjob
+    - kubernetes
+    - helm
+    maintainers:
+    - email: your.email@example.com
+      name: Your Name
+    name: job-cronjob-chart
+    sources:
+    - https://github.com/your-repo/job-cronjob-chart
+    type: application
+    urls:
+    - https://manoj-astuto.github.io/onelens-charts/job-cronjob-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-03-23T16:24:31.133261+05:30"
