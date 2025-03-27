@@ -3,7 +3,7 @@ entries:
   onelens-agent:
   - apiVersion: v2
     appVersion: 0.1.1-beta.2
-    created: "2025-03-27T12:41:03.656409+05:30"
+    created: "2025-03-27T12:41:43.211851+05:30"
     dependencies:
     - alias: onelens-agent
       condition: onelens-agent.enabled
@@ -28,36 +28,9 @@ entries:
     urls:
     - https://manoj-astuto.github.io/onelens-charts/onelens-agent-0.1.1-beta.2.tgz
     version: 0.1.1-beta.2
-  - apiVersion: v2
-    appVersion: 0.1.1-beta.2
-    created: "2025-03-27T12:41:03.662049+05:30"
-    dependencies:
-    - alias: onelens-agent
-      condition: onelens-agent.enabled
-      name: onelens-agent-base
-      repository: oci://609916866699.dkr.ecr.ap-south-1.amazonaws.com/helm-charts
-      version: 0.1.1-beta.2
-    - condition: prometheus.enabled
-      name: prometheus
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 27.3.0
-    - condition: prometheus-opencost-exporter.enabled
-      name: prometheus-opencost-exporter
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 0.1.1
-    description: Helm chart for the OneLens Agent
-    digest: 43ec3903fd65299e31f61f77a59f579b742468c433966f4ab146c34e670ff93a
-    maintainers:
-    - email: support@onelens.ai
-      name: OneLens
-    name: onelens-agent
-    type: application
-    urls:
-    - https://manoj-astuto.github.io/onelens-charts/docs/onelens-agent-0.1.1-beta.2.tgz
-    version: 0.1.1-beta.2
   onelensdeployer:
   - apiVersion: v2
-    created: "2025-03-27T12:41:03.656726+05:30"
+    created: "2025-03-27T12:41:43.212151+05:30"
     description: A Helm chart for deploying Kubernetes Jobs and CronJobs
     digest: 531a539c637a9cc7b2ba006d957f0f8025e866068d50209cd277e42762fd1d83
     keywords:
@@ -75,21 +48,4 @@ entries:
     urls:
     - https://manoj-astuto.github.io/onelens-charts/onelensdeployer-0.1.0.tgz
     version: 0.1.0
-  - apiVersion: v2
-    created: "2025-03-27T12:41:03.662579+05:30"
-    description: A Helm chart for deploying Kubernetes Jobs and CronJobs
-    digest: 3bda2e457558b9bb2e0d813460bada54fba8b9c85042e21e464c08620deb438f
-    keywords:
-    - job
-    - cronjob
-    - kubernetes
-    - helm
-    maintainers:
-    - email: astuto@astuto.ai
-      name: astuto
-    name: onelensdeployer
-    type: application
-    urls:
-    - https://manoj-astuto.github.io/onelens-charts/docs/onelensdeployer-0.1.0.tgz
-    version: 0.1.0
-generated: "2025-03-27T12:41:03.647828+05:30"
+generated: "2025-03-27T12:41:43.206165+05:30"
