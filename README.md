@@ -1,16 +1,22 @@
-#### Once the file is copied to repo onelens-charts - recreate the index.yaml 
-helm repo index . --url https://manoj-astuto.github.io/onelens-charts
+# onelens-installation-scripts
 
-#### Push the latest changes tgz file and index.yaml to github 
-git add .
-git commit -m "new release published"
-git push 
+#### Steps to Build the Docker Images: 
+docker buildx build --platform linux/amd64,linux/arm64 -t public.ecr.aws/w7k6q5m9/onelens-deployer:latest --push .
 
-### Steps on the client cluster to execute
-helm repo add onelens https://manoj-astuto.github.io/onelens-charts
 
-helm repo update
+#### Helm package move the file to onelens-charts repo 
+helm package charts/mychart
+mv mychart-0.1.0.tgz docs/
 
-helm upgrade --install onelensdeployer onelens/onelensdeployer --set job.env.TENANT_NAME=fresh --set job.env.CLUSTER_NAME=main
+#### Copy the onelensdeployer-0.1.0.tgz to onelens-chart 
+cp -r onelensdeployer-0.1.0.tgz <path_to_repo>/onelens-charts
+
+
+#Command that client will execute.
+helm repo add onelens https://manoj-astuto.github.io/onelens-charts && \
+helm repo update && \
+helm upgrade --install onelensdeployer onelens/onelensdeployer --set job.env.CLUSTER_NAME=domain --set job.env.REGION=ap-south-1 --set-string job.env.ACCOUNT=376129875853 --set job.env.REGISTRATION_TOKEN="OWMyN2FhZjUtYzljMC00ZWI5LTg1MTgtMWU5NzM0NjllMDU2"
+
+
 
 
